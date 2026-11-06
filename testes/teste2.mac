@@ -1,0 +1,41 @@
+// =============================================
+// Teste 2: Verificacao de numero par/impar e while
+// Demonstra: if/else, while, operadores logicos
+// =============================================
+
+print("=== Teste de Par ou Impar ===");
+
+var n: int;
+print("Digite um numero:");
+input(n);
+
+// Verifica se e par ou impar usando modulo
+if (n % 2 == 0) {
+    print("O numero e PAR");
+} else {
+    print("O numero e IMPAR");
+}
+
+// Conta de 1 ate n usando while
+print("Contando de 1 ate o numero digitado:");
+var contador: int = 1;
+while (contador <= n) {
+    print(contador);
+    contador = contador + 1;
+}
+
+print("Contagem concluida!");
+
+// Verificacao de intervalo com operadores logicos
+var x: int = 5;
+if (x > 0 && x < 10) {
+    print("x esta entre 0 e 10");
+}
+
+// Teste de negacao
+var ativo: bool = true;
+if (!ativo) {
+    print("Inativo");
+} else {
+    print("Ativo");
+}

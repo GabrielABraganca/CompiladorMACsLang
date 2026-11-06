@@ -1,0 +1,77 @@
+// =============================================
+// Teste 3: Multiplas funcoes e operacoes
+// Demonstra: funcoes com parametros, aritmetica,
+//            chamadas de funcao em expressoes
+// =============================================
+
+// Funcao: soma dois inteiros
+func soma(a: int, b: int): int {
+    return a + b;
+}
+
+// Funcao: retorna o maior entre dois inteiros
+func maior(a: int, b: int): int {
+    if (a > b) {
+        return a;
+    } else {
+        return b;
+    }
+}
+
+// Funcao: calcula potencia (base ^ exp) iterativa
+func potencia(base: int, exp: int): int {
+    var resultado: int = 1;
+    var i: int = 0;
+    while (i < exp) {
+        resultado = resultado * base;
+        i = i + 1;
+    }
+    return resultado;
+}
+
+// Funcao: verifica se numero e positivo
+func ehPositivo(n: int): bool {
+    if (n > 0) {
+        return true;
+    }
+    return false;
+}
+
+// ---- Programa principal ----
+
+print("=== Calculadora MACSLang ===");
+
+var a: int;
+var b: int;
+
+print("Digite o primeiro numero:");
+input(a);
+
+print("Digite o segundo numero:");
+input(b);
+
+// Testa as funcoes
+var s: int = soma(a, b);
+print("Soma:");
+print(s);
+
+var m: int = maior(a, b);
+print("Maior:");
+print(m);
+
+// Calcula 2^8
+var pot: int = potencia(2, 8);
+print("2 elevado a 8 =");
+print(pot);
+
+// Testa ehPositivo
+if (ehPositivo(a)) {
+    print("Primeiro numero e positivo");
+} else {
+    print("Primeiro numero nao e positivo");
+}
+
+// Expressao complexa
+var resultado: int = soma(a, b) * maior(a, b);
+print("soma(a,b) * maior(a,b) =");
+print(resultado);
